@@ -1,6 +1,22 @@
-# analyze_boltz.py
+# 📊 analyze_boltz.py
+
+> **Harvest a sprawling Boltz-2 output tree into one tidy summary, CSV, and CIF folder.**
+
+![python](https://img.shields.io/badge/python-3.10+-3776AB?logo=python&logoColor=white) ![dependencies](https://img.shields.io/badge/dependencies-zero-00897B) ![engine](https://img.shields.io/badge/engine-Boltz--2-467FF7) ![licence](https://img.shields.io/badge/licence-MIT-9b51e0) ![author](https://img.shields.io/badge/author-Marc%20C.%20Deller%2C%20D.Phil.-1C244B)
+
+<table>
+<tr>
+<td>🌐 <b>Website</b></td><td><a href="https://marcdeller.com" target="_blank" rel="noopener noreferrer">marcdeller.com</a></td>
+<td>✉️ <b>Contact</b></td><td><a href="mailto:marc@marcdeller.com">marc@marcdeller.com</a></td>
+<td>🐙 <b>GitHub</b></td><td><a href="https://github.com/bellcheddar/analyze-boltz2-results" target="_blank" rel="noopener noreferrer">bellcheddar/analyze-boltz2-results</a></td>
+</tr>
+</table>
+
+---
 
 A post-run analysis script for [Boltz-2](https://github.com/jwohlwend/boltz) co-folding predictions. Run it in any directory containing a `boltz_run_*.log` file and a `predictions/` subdirectory to automatically harvest confidence scores, affinity predictions, CIF models, and run metadata into a clean summary report and CSV.
+
+Why it matters: a Boltz-2 batch leaves behind a deep, scattered output tree (per-target directories, confidence JSONs, affinity JSONs, ModelCIFs, and a verbose log) that is painful to read by hand and impossible to rank at a glance. analyze_boltz.py walks the whole tree, extracts every useful number, derives a pIC50 estimate, and consolidates everything into a human-readable summary, a machine-readable CSV, and a flat folder of all model CIFs. It is useful for anyone screening many complexes: instant triage and ranking of predictions by confidence and predicted affinity, with robust handling of missing or malformed files so no result is silently dropped.
 
 ---
 
@@ -117,3 +133,18 @@ Tested against Boltz-2 output structure as of early 2026. The script assumes:
 ## Licence
 
 MIT
+
+---
+
+## 👤 Author
+
+**Marc C. Deller, D.Phil.**  
+Structural biologist & drug discovery scientist  
+
+<table>
+<tr>
+<td>🌐</td><td><a href="https://marcdeller.com" target="_blank" rel="noopener noreferrer">marcdeller.com</a></td>
+<td>✉️</td><td><a href="mailto:marc@marcdeller.com">marc@marcdeller.com</a></td>
+<td>🐙</td><td><a href="https://github.com/bellcheddar/analyze-boltz2-results" target="_blank" rel="noopener noreferrer">github.com/bellcheddar/analyze-boltz2-results</a></td>
+</tr>
+</table>
